@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{styles/cssandjs/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Triagem Covid - 19</h1>
+    <img th:src="@{assets/zup.png}"} alt="zup">
+</div>
+<form action="#" th:action="@{/questionary}" th:object="${questionary}" method="post">
+    <p>Informe seu número de <span>registro</span>: <input type="text" value="" th:field="*{registry}"/></p>
+    <p>Você teve contato próximo com alguém testado positivo para covid-19 nos último 14 dias ? <input type="checkbox" th:field="*{contact}" /></p>
+    <p>Você apresentou algum dos seguintes <span>sintomas nas últimas 24 horas?</span></p>
+
+    <p><input type="checkbox" th:field="*{fever}"/> Febre</p>
+    <p><input type="checkbox" th:field="*{chills}"/> Calafrios</p>
+    <p><input type="checkbox" th:field="*{shortness_breathe}"/> Falta de ar</p>
+    <p><input type="checkbox" th:field="*{cough}"/> Tosse</p>
+    <p><input type="checkbox" th:field="*{sore_throat}"/> Dor de garganta</p>
+    <p><input type="checkbox" th:field="*{headache}"/> Dor de cabeça</p>
+    <p><input type="checkbox" th:field="*{body_ache}"/> Dor no corpo</p>
+    <p><input type="checkbox" th:field="*{loss_physical_senses}"/> Perda de olfato e/ou paladar</p>
+    <p><input type="checkbox" th:field="*{diarrhea}"/> Diarreia (por motivo desconhecido)</p>
+    <p><input type="submit" value="Enviar" class="myButton"/> <input type="reset" value="Limpar" class="myButton"/></p>
+</form>
+</body>
+</html>

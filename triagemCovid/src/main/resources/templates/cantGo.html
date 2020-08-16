@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body{
+            background-color: #3CBC8D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            text-align: center;
+            width: 200px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            grid-auto-rows: 2fr;
+            align-items: center;
+            justify-content: center;
+        }
+        .myButton {
+            padding-top: 200px;
+            justify-content: flex-start;
+            background-color:#44c767;
+            border-radius:6px;
+            border:1px solid #18ab29;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:16px;
+            font-weight:bold;
+            padding:9px 30px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #2f6627;
+        }
+        .myButton:hover {
+            background-color:#5cbf2a;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>De acordo com suas respostas e com as recomendações do estado de São Paulo, você não pode ir ao trabalho</h1>
+    <div class="container">
+        <img th:src="@{@{assets/wrong.png}}">
+        <a href="/questions" class="myButton">Responder Novamente</a>
+    </div>
+
+</body>
+</html>
